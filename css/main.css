@@ -1,0 +1,292 @@
+/*Reset CSS elimina estilos predeterminados*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Mobile first*/
+
+/*Tipografía global*/
+body{
+font-family: "Quicksand", sans-serif;
+color: brown;
+line-height: 1.5;
+}
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+h2{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/*Header*/
+header{
+    background-color: rgb(223, 184, 150);
+    color: olivedrab;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding:  1rem 0rem;
+    text-align: center;
+}
+/*Nav principal con BEM*/
+.nav__list{
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.nav__link{
+  color: maroon;
+  text-decoration: none;
+  font-size: 1.05rem;
+  padding: 0.2rem 0rem;
+  display: inline-block;
+}
+
+/*Imagenes*/
+main img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+/*Contenedor principal*/
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    place-items: center;
+    gap: 1rem;
+    margin: 1rem;   
+}
+/*Parrafo*/
+.contenedor-principal p{
+    max-width: 25ch;
+}
+
+/*Servicios y contacto*/
+.servicios-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0rem;
+}
+.servicios-contacto a{
+    color: olivedrab;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/*Footer*/
+footer nav ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  /*justify-content: center;*/
+  font-size: 1.5rem;
+}
+footer nav ul li a{
+  color: maroon;
+  text-decoration: none;
+  font-size: 1rem;
+  
+}
+/*Pág servicios*/
+.imagen-texto{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    place-items: center;
+    gap: 1rem 1rem;
+    max-width: 900px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    border-radius: 8px;
+}
+
+/*Formulario*/
+.contacto{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem 1rem;
+}
+.contacto form{
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+form{
+    color: brown;
+    max-width: 520px;
+    padding: 1rem;
+    border-radius: 12px;
+}
+/*Inputs de texto y email*/
+form input[type="text"],
+form input[type="email"]{
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid #c9b8aa;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+/*:focus-visible (accesible) */
+form input:focus-visible{
+    outline: 3px solid olivedrab;
+    outline-offset: 2px;
+}
+/*:hover*/
+form input[type="text"]:hover,
+form input[type="email"]:hover{
+    border-color: olivedrab;
+}
+/*Botón*/
+input[type="submit"]{
+    background-color: olivedrab;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: inherit;
+    font-weight: 700;
+}
+/*:hover en botón*/
+input[type="submit"]:hover{
+    filter: brightness(0.95);
+}
+/*:active en el botoón*/
+input[type="submit"]:active{
+    transform: scale(0.98);
+}
+/*Radios: más espacio*/
+form input[type="radio"]{
+    margin-right: 0.5rem;
+}
+/*:checked (resalta el label de al lado cuando elijes un radio*/
+form input[type="radio"]:checked + label{
+    color: olivedrab;
+    font-weight: 700;
+}
+/*:invalid*/
+form input:invalid:not(:placeholder-shown){
+    border-color: #7f1717;
+    box-shadow: 0 0 0 1px #7f1717;
+}
+::placeholder{
+    color: olivedrab;
+}
+/*Galeria*/
+.galeria{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    max-width: 980px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+.galeria img{
+    width: 100%;
+    max-width: none;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+/*Tablet (768px)*/
+
+@media (min-width: 768px){
+
+     .contenedor-principal{
+        grid-template-columns: minmax(200px, 280px) auto;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem auto;
+        text-align: center;
+    }
+    main nav ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .servicios-contacto{
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    footer nav ul{
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /*pag servicios*/
+    .imagen-texto{
+        grid-template-columns: minmax(200PX, 280px) auto;
+        gap: 1rem;
+        justify-content: center;
+        margin: 1rem auto;
+        padding: 0 1rem;
+}
+    /*galeria*/ 
+    .galeria{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.25rem;
+    }
+}
+
+/*Desktop (1024px)*/
+@media (min-width: 1024px){
+
+    .contenedor-principal{
+        grid-template-columns: 300px auto;
+        gap: 1.5rem;
+        margin: 1rem auto;
+    }
+    .contenedor-principal img{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    main nav ul{
+        gap: 60px;
+        justify-content: center;
+    }
+
+    .servicios-contacto{
+        gap: 3rem;
+        justify-content: center;
+    }
+    /*pagina servicios*/
+    .imagen-texto{
+        grid-template-columns: 300px auto;
+        gap: 1.5rem;
+        margin: 1rem auto;
+    }
+    .galeria{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.35rem;
+    }
+
+}

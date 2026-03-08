@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/main.css">
+    <title>La mar en coche</title>
+</head>
+<body>
+    <header>
+        <h1>LA MAR EN COCHE</h1>
+        <h2>Lettering & ilustración</h2>
+    </header>
+    <main>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Inicio</a>
+                </li>
+                <!--Agregar a estos links a futuro
+                <li><a href=>Sobre mi</a></li>-->
+                <li class="nav__item">
+                    <a class="nav__link" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="galeria.htm">Galeria</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--formulario de contacto-->
+        <section class="contacto">
+        <form action="mensajeenviado.html" method="get">
+        
+        <label for="">Nombre</label><br>
+        <input type="text" name="Nombre" id="nombre" placeholder="Escribe tu nombre" required><br><br>
+        
+        <label for="">Email</label><br>
+        <input type="email" name="email" id="" placeholder="Escribe tu email" required><br><br>
+        
+        <label for="">Cuál servicio te interesa?</label><br>
+        
+        <input type="radio" name= "servicio" id="servicio-lettering" value="lettering" required>
+        <label for="servicio-lettering">Lettering personalizado</label><br>
+        
+        <input type="radio" name="servicio" id="servicio-workshops" value="workshops">
+        <label for="servicio-workshops">Workshops y clases</label><br>
+        
+        <input type="radio" name="servicio" id="servicio-papeleria" value="papeleria">
+        <label for="servicio-papeleria">Papelería y cartelería</label><br><br>
+        
+        <label for="mensaje">Mensaje</label><br>
+        <input type="text" name="mensaje" id="mensaje" placeholder="Escribe aqui tu mensaje"><br><br>
+        
+        <input type="submit" value="Enviar">
+        </form>
+        </section>
+    </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="">Información legal</a></li>
+                    <li><a href="">Redes Sociales</a></li>
+                    <li><a href="">Preguntas frecuentes</a></li>
+                    <li><a href="">Política de privacidad</a></li>
+                </ul>
+            </nav>
+        </footer>
+</body>
+</html>
