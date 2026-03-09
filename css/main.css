@@ -38,21 +38,37 @@ header{
     padding:  1rem 0rem;
     text-align: center;
 }
-/*Nav principal con BEM*/
-.nav__list{
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
+
+/* Bootstrap navbar personalizada */
+.navbar-custom{
+    background-color: rgb(223, 184, 150);
 }
-.nav__link{
-  color: maroon;
-  text-decoration: none;
-  font-size: 1.05rem;
-  padding: 0.2rem 0rem;
-  display: inline-block;
+
+/* menú */
+.navbar-custom .navbar-nav{
+    gap: 1rem;
+    font-weight: 600;
+}
+
+/* links */
+.navbar-custom .nav-link{
+    color: maroon;
+    font-size: 1.05rem;
+    padding: 0.2rem 0;
+}
+
+.navbar-custom .nav-link:hover{
+    color: olivedrab;
+}
+
+/* botón hamburguesa */
+.navbar-toggler{
+    border-color: maroon;
+}
+
+/* icono hamburguesa visible */
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='maroon' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /*Imagenes*/
@@ -215,7 +231,12 @@ form input:invalid:not(:placeholder-shown){
 
 @media (min-width: 768px){
 
-     .contenedor-principal{
+    .navbar-custom .navbar-nav{
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .contenedor-principal{
         grid-template-columns: minmax(200px, 280px) auto;
         gap: 1rem;
         justify-content: center;
@@ -258,6 +279,9 @@ form input:invalid:not(:placeholder-shown){
 /*Desktop (1024px)*/
 @media (min-width: 1024px){
 
+    .navbar-custom .navbar-nav{
+        gap: 60px;
+    }
     .contenedor-principal{
         grid-template-columns: 300px auto;
         gap: 1.5rem;
