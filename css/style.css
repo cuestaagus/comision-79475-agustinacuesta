@@ -76,10 +76,9 @@ main img {
   max-width: 300px;
   border-radius: 8px;
 }
-main {
-  /* Contenedor principal */
-}
-main .contenedor-principal {
+
+/* Contenedor principal */
+.contenedor-principal {
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
@@ -87,45 +86,36 @@ main .contenedor-principal {
   gap: 1rem;
   margin: 1rem;
 }
-main .contenedor-principal p {
+.contenedor-principal p {
   max-width: 25ch;
 }
-main {
-  /* Servicios y contacto */
-}
-main .servicios-contacto {
+
+/* Servicios y contacto */
+.servicios-contacto {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   margin: 2rem 0;
 }
-main .servicios-contacto a {
+.servicios-contacto a {
   color: olivedrab;
   font-size: 1.3rem;
   font-weight: 700;
   text-decoration: none;
 }
-main {
-  /* Footer */
-}
-main footer nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
-  font-size: 1.5rem;
-}
-main footer nav ul li a {
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
   color: maroon;
-  text-decoration: none;
-  font-size: 1rem;
+  margin-top: 2rem;
 }
-main {
-  /* Pág servicios */
-}
-main .imagen-texto {
+
+/* Pág servicios */
+.imagen-texto {
   display: grid;
   grid-template-columns: 1fr;
   text-align: center;
@@ -136,27 +126,27 @@ main .imagen-texto {
   padding: 0 1rem;
   border-radius: 8px;
 }
-main {
-  /* Formulario */
-}
-main .contacto {
+
+/* Formulario */
+.contacto {
   display: flex;
   justify-content: center;
   padding: 0.5rem 1rem 1rem;
 }
-main .contacto form {
+.contacto form {
   width: 100%;
   max-width: 520px;
   margin: 0 auto;
 }
-main form {
+
+form {
   color: brown;
   max-width: 520px;
   padding: 1rem;
   border-radius: 12px;
 }
-main form input[type=text],
-main form input[type=email] {
+form input[type=text],
+form input[type=email] {
   width: 100%;
   padding: 0.75rem 0.9rem;
   border: 1px solid #c9b8aa;
@@ -164,26 +154,27 @@ main form input[type=email] {
   font-family: inherit;
   font-size: 1rem;
 }
-main form input[type=text]:hover,
-main form input[type=email]:hover {
+form input[type=text]:hover,
+form input[type=email]:hover {
   border-color: olivedrab;
 }
-main form input:focus-visible {
+form input:focus-visible {
   outline: 3px solid olivedrab;
   outline-offset: 2px;
 }
-main form input[type=radio] {
+form input[type=radio] {
   margin-right: 0.5rem;
 }
-main form input[type=radio]:checked + label {
+form input[type=radio]:checked + label {
   color: olivedrab;
   font-weight: 700;
 }
-main form input:invalid:not(:placeholder-shown) {
+form input:invalid:not(:placeholder-shown) {
   border-color: #7f1717;
   box-shadow: 0 0 0 1px #7f1717;
 }
-main input[type=submit] {
+
+input[type=submit] {
   background-color: olivedrab;
   color: white;
   border: none;
@@ -193,19 +184,19 @@ main input[type=submit] {
   font-family: inherit;
   font-weight: 700;
 }
-main input[type=submit]:hover {
+input[type=submit]:hover {
   filter: brightness(0.95);
 }
-main input[type=submit]:active {
+input[type=submit]:active {
   transform: scale(0.98);
 }
-main ::placeholder {
+
+::placeholder {
   color: olivedrab;
 }
-main {
-  /* Galeria */
-}
-main .galeria {
+
+/* Galeria */
+.galeria {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.5rem;
@@ -213,7 +204,7 @@ main .galeria {
   margin: 2rem auto;
   padding: 0 1.5rem;
 }
-main .galeria img {
+.galeria img {
   width: 100%;
   max-width: none;
   display: block;
@@ -294,4 +285,4 @@ main .galeria img {
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=style.css.map */

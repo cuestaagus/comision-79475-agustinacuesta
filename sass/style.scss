@@ -1,0 +1,12 @@
+//comentario en sass
+/*comentario en sass y css*/
+
+//reset
+@use "base/reset";
+//home
+@use "pages/home";
+//tablet
+@use "layout/mq-tablet";
+//desktop
+@use "layout/mq-desktop";
+

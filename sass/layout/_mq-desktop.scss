@@ -1,0 +1,45 @@
+//variables
+@use "../utilities/variables" as *;
+//mixin
+@use "../utilities/mixin" as *;
+
+@media (min-width: 1024px) {
+  .navbar-custom {
+    .navbar-nav {
+      gap: 60px;
+    }
+  }
+
+  .contenedor-principal {
+    grid-template-columns: 300px auto;
+    gap: 1.5rem;
+    margin: 1rem auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  main nav ul {
+    gap: 60px;
+    justify-content: center;
+  }
+
+  .servicios-contacto {
+    gap: 3rem;
+    justify-content: center;
+  }
+
+  .imagen-texto {
+    grid-template-columns: 300px auto;
+    gap: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35rem;
+  }
+}

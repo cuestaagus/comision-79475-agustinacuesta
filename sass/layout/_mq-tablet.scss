@@ -1,0 +1,52 @@
+//variables
+@use "../utilities/variables" as *;
+//mixin
+@use "../utilities/mixin" as *;
+
+@media (min-width: 768px) {
+  .navbar-custom {
+    .navbar-nav {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+
+  .contenedor-principal {
+    grid-template-columns: minmax(200px, 280px) auto;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  main nav ul {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .servicios-contacto {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  footer nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .imagen-texto {
+    grid-template-columns: minmax(200px, 280px) auto;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25rem;
+  }
+}
